@@ -1,0 +1,154 @@
+/*CSS DOCUMENT*/
+
+html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit;} /*My edited version of the Eric Meyer’s reset tool. You may want to include this in all of your future CSS files. */
+
+img {
+    width: 100%; /*Please leave this line.*/
+     display: block;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* ---------- Page ---------- */
+
+body {
+    background-color: #d9d9d9; /* the gray area around the content; it grows with the window */
+    color: #222;
+    font-family: "poppins", Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Grid container #1: stacks header, figure, main and footer.
+   Every child spans the full width of the content by default. */
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 73rem;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #fafafa;
+}
+
+/* ---------- Header ---------- */
+
+header {
+    padding: 3rem 1.5rem 1.5rem;
+    background-color: #ff8800;
+    color: #faf9f8;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "sutro", serif;
+}
+
+h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.08;
+}
+
+h2 {
+    margin-top: .35rem;
+    color: #ffddbb;
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.25;
+}
+
+/* ---------- Figure ---------- */
+
+/* Grid container #2: image on the left, caption on the right */
+figure {
+    display: grid;
+    grid-template-columns: 15fr 4fr; /* image takes most of the width */
+    align-items: start;
+    background-color: #fafafa;
+}
+
+figure img {
+    height: auto; /* keep the photo's natural proportions so it fills the first screen */
+}
+
+figcaption {
+    padding: 2rem 1.5rem;
+    color: #222;
+    font-family: "poppins", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.45;
+}
+
+/* ---------- Main ---------- */
+
+/* Grid container #3: Ingredients and Directions, one column each */
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+    padding: 3.25rem 3rem 3rem;
+}
+
+/* orange rule above each section heading */
+section {
+    border-top: 2px solid #ff8800;
+    padding-top: 1.25rem;
+}
+
+h3 {
+    margin-bottom: .9rem;
+    color: #ff8800;
+    font-size: 1.4rem;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+ul,
+ol {
+    padding-left: 0; /* markers hang outside the text edge, like the reference */
+}
+
+li {
+    font-size: 1.1rem;
+    line-height: 1.55;
+}
+
+li + li {
+    margin-top: .55rem;
+}
+
+ul li::marker {
+    color: #222;
+    font-size: .8em;
+}
+
+ol li::marker {
+    color: #222;
+    font-family: "poppins", sans-serif;
+    font-weight: 700;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+    padding: 1rem 1.5rem;
+    background-color: #ff8800;
+    color: #ffffff;
+    font-family: "poppins", sans-serif;
+    font-size: .9rem;
+    font-weight: 400;
+    font-style: normal;
+}
+}
+/*By the way, when we use the slash-asterisk combo, it’s a comment on the CSS and it’s meant for human beings. The machine knows it is not supposed to process anything until it finds a asterisk-slash combo that ends the comment on the CSS. */
